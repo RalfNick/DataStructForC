@@ -6,9 +6,10 @@
 //  Copyright © 2018年 wanglixin. All rights reserved.
 //
 
-# include <stdio.h>
-# include <stdlib.h>
+# include "Sort.h"
 # include "Array.h"
+# include "stack.h"
+# include "StackUtil.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -140,6 +141,15 @@ int main(int argc, const char * argv[]) {
     
     showArr(getPerfectNumbers(10000));
     printf("--------------getPerfectNumbers--------------\n");
+    
+    printf("----------------------------------------------\n");
+    printf("--------------test Stack--------------\n");
+    testStack();
+    
+    
+    printf("----------------------------------------------\n");
+    printf("--------------test Stack Util--------------\n");
+    testStackUtil();
     
     return 0;
 }

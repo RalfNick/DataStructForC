@@ -6,8 +6,6 @@
 //  Copyright © 2018年 wanglixin. All rights reserved.
 //
 #include "Array.h"
-# include <stdio.h>
-# include <stdlib.h>
 #include <string.h>
 
 // 交换
