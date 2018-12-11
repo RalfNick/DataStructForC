@@ -9,6 +9,7 @@
 # include "Sort.h"
 # include "Array.h"
 # include "stack.h"
+# include "queue.h"
 # include "StackUtil.h"
 
 int main(int argc, const char * argv[]) {
@@ -150,6 +151,10 @@ int main(int argc, const char * argv[]) {
     printf("----------------------------------------------\n");
     printf("--------------test Stack Util--------------\n");
     testStackUtil();
+    
+    printf("----------------------------------------------\n");
+    printf("--------------test Queue--------------\n");
+    testQueue();
     
     return 0;
 }
