@@ -11,6 +11,9 @@
 # include "stack.h"
 # include "queue.h"
 # include "StackUtil.h"
+# include "array_queue.h"
+# include "queue_two_stack.h"
+# include "stack_two_queue.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -155,6 +158,19 @@ int main(int argc, const char * argv[]) {
     printf("----------------------------------------------\n");
     printf("--------------test Queue--------------\n");
     testQueue();
+    
+    printf("----------------------------------------------\n");
+    printf("--------------testArrayQueue--------------\n");
+    test_queue();
+    
+    printf("----------------------------------------------\n");
+    printf("--------------testQueueTwoStack--------------\n");
+    testQueueTwoStack();
+    
+    printf("----------------------------------------------\n");
+    printf("--------------test StackTwoQueue--------------\n");
+    testStackTwoQueue();
+    
     
     return 0;
 }

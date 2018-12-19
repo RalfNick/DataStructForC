@@ -10,16 +10,16 @@
 #include<stdlib.h>
 #include <string.h>
 
-ArrayQueue * createQueueDef(){
+CircleQueue * createQueueDef(){
     return createQueue(DEFAULT_SIZE);
 }
 
-ArrayQueue * createQueue(int size){
+CircleQueue * createQueue(int size){
     if (size < 1) {
         size = DEFAULT_SIZE;
     }
     
-    ArrayQueue * queue = (ArrayQueue *)malloc(sizeof(ArrayQueue));
+    CircleQueue * queue = (CircleQueue *)malloc(sizeof(CircleQueue));
     if (queue == NULL) {
         free(queue);
         return NULL;
@@ -37,7 +37,7 @@ ArrayQueue * createQueue(int size){
     return queue;
 }
 
-bool enQueue(ArrayQueue *queue,int val){
+bool enQueue(CircleQueue *queue,int val){
     if (isFullQueue(queue)) {
         return false;
     }
@@ -47,7 +47,7 @@ bool enQueue(ArrayQueue *queue,int val){
     return true;
 }
 
-int deQueue(ArrayQueue *queue){
+int deQueue(CircleQueue *queue){
     if (isEmptyQueue(queue)) {
         return -1;
     }
@@ -56,35 +56,35 @@ int deQueue(ArrayQueue *queue){
     return queue->array[index];
 }
 
-int sizeOfQueue(ArrayQueue *queue){
+int sizeOfQueue(CircleQueue *queue){
     if (queue == NULL) {
         return 0;
     }
-    return (queue->rear + queue->size) % queue->size;
+    return (queue->rear + queue->size - queue->front) % queue->size;
 }
 
-int peekOfQueue(ArrayQueue *queue){
+int peekOfQueue(CircleQueue *queue){
     if (isEmptyQueue(queue)) {
         return -1;
     }
     return queue->array[queue->front];
 }
 
-bool isEmptyQueue(ArrayQueue *queue){
+bool isEmptyQueue(CircleQueue *queue){
     if (queue == NULL) {
         return true;
     }
     return queue->front == queue->rear;
 }
 
-bool isFullQueue(ArrayQueue *queue){
+bool isFullQueue(CircleQueue *queue){
     if (queue == NULL) {
         return false;
     }
     return (queue->rear + 1) % queue->size == queue->front;
 }
 
-void printQueue(ArrayQueue * queue){
+void printQueue(CircleQueue * queue){
     if (queue == NULL) {
         return;
     }
@@ -95,8 +95,8 @@ void printQueue(ArrayQueue * queue){
 }
 
 void testQueue(){
-    ArrayQueue * queue = createQueue(10);
-    ArrayQueue * queue1 = createQueueDef();
+    CircleQueue * queue = createQueue(10);
+    CircleQueue * queue1 = createQueueDef();
     printf(" queue is empty: %d \n",isEmptyQueue(queue));
     
     for (int i = 0; i < 10; i++) {
@@ -113,9 +113,14 @@ void testQueue(){
         deQueue(queue);
     }
     printf("---------------dequeue----------------\n");
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
         printf(" dequeue is : %d \n",deQueue(queue1));
     }
-    
+    printf("---------------dequeue and enQueue----------------\n");
+    for (int i = 0; i < 5; i++) {
+        enQueue(queue1,i);
+        printf(" queue1 size is : %d \n",sizeOfQueue(queue1));
+    }
+    printQueue(queue1);
 }
 
