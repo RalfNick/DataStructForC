@@ -14,6 +14,7 @@
 # include "array_queue.h"
 # include "queue_two_stack.h"
 # include "stack_two_queue.h"
+# include "linked_list.h"
 
 int main(int argc, const char * argv[]) {
     
@@ -171,6 +172,9 @@ int main(int argc, const char * argv[]) {
     printf("--------------test StackTwoQueue--------------\n");
     testStackTwoQueue();
     
+    printf("----------------------------------------------\n");
+    printf("--------------test single linked list--------------\n");
+    test_linked_list();
     
     return 0;
 }
