@@ -249,7 +249,7 @@ void test_linked_list(){
         add_linked_list(list, i);
         add_linked_list(list1, i);
     }
-    printf(" queue size is : %d \n",size_linked_list(list));
+    printf(" linked size is : %d \n",size_linked_list(list));
     print_linked_list(list);
     
     printf(" is_contain_linked_list - 5 : %d \n",is_contain_linked_list(list,5));

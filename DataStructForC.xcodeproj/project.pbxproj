@@ -16,6 +16,7 @@
 		093B891821C69D8600009FD2 /* array_queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 093B891721C69D8600009FD2 /* array_queue.c */; };
 		094572E721B548030089C1C1 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 094572E621B548030089C1C1 /* stack.c */; };
 		09737CFA21D3D5C400E8A20A /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 09737CF921D3D5C400E8A20A /* linked_list.c */; };
+		09BAB45A21ECBD9000232A05 /* double_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 09BAB45921ECBD9000232A05 /* double_linked_list.c */; };
 		09DFC29621B25799005B6372 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC29521B25799005B6372 /* main.c */; };
 		09DFC29D21B25A61005B6372 /* sort_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = 09DFC29C21B25A61005B6372 /* sort_lib.c */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,8 @@
 		094572E621B548030089C1C1 /* stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		09737CF821D3D5C400E8A20A /* linked_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linked_list.h; sourceTree = "<group>"; };
 		09737CF921D3D5C400E8A20A /* linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linked_list.c; sourceTree = "<group>"; };
+		09BAB45821ECBD9000232A05 /* double_linked_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = double_linked_list.h; sourceTree = "<group>"; };
+		09BAB45921ECBD9000232A05 /* double_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = double_linked_list.c; sourceTree = "<group>"; };
 		09DFC29321B25799005B6372 /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DFC29521B25799005B6372 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		09DFC29B21B25A61005B6372 /* sort_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sort_lib.h; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		0923060221AE47C90084D318 /* DataStructForC */ = {
 			isa = PBXGroup;
 			children = (
+				09BAB45721ECBD4100232A05 /* double_linked_list */,
 				092A98B221D24C2D009CB044 /* linked_list */,
 				092D15E921BFE47E0044CE42 /* Queue */,
 				094572E421B5479B0089C1C1 /* Stack */,
@@ -156,6 +160,15 @@
 				090E8B0821C7F8740084F07E /* stack_two_queue.c */,
 			);
 			name = Stack;
+			sourceTree = "<group>";
+		};
+		09BAB45721ECBD4100232A05 /* double_linked_list */ = {
+			isa = PBXGroup;
+			children = (
+				09BAB45821ECBD9000232A05 /* double_linked_list.h */,
+				09BAB45921ECBD9000232A05 /* double_linked_list.c */,
+			);
+			name = double_linked_list;
 			sourceTree = "<group>";
 		};
 		09DFC28C21B25669005B6372 /* Sort */ = {
@@ -260,6 +273,7 @@
 				092D15EC21BFE4C30044CE42 /* queue.c in Sources */,
 				0923060421AE47C90084D318 /* main.c in Sources */,
 				090E8B0921C7F8740084F07E /* stack_two_queue.c in Sources */,
+				09BAB45A21ECBD9000232A05 /* double_linked_list.c in Sources */,
 				0923060D21AE4A850084D318 /* Array.c in Sources */,
 				090E8B0621C7D8B80084F07E /* queue_two_stack.c in Sources */,
 			);
